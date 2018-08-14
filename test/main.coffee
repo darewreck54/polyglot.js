@@ -92,6 +92,16 @@ describe "pluralize", ->
     @polyglot.t("count_name", 2).should.equal "2 Names"
     @polyglot.t("count_name", 3).should.equal "3 Names"
 
+describe "locale-specific pluralization rules", ->
+  it "pluralizes in Croatian (vote) Test", ->
+    @phrases = "n_votes" : "%{smart_count} glas |||| %{smart_count} glasa |||| %{smart_count} glasova"
+    @polyglot = new Polyglot({phrases:@phrases, locale:'hr-HR'})
+    @polyglot.t("n_votes", smart_count: 1).should.equal("1 glas")
+    @polyglot.t("n_votes", smart_count: 21).should.equal("21 glas")
+    @polyglot.t("n_votes", smart_count: 2).should.equal("2 glasa")
+    @polyglot.t("n_votes", smart_count: 22).should.equal("22 glasa")
+    @polyglot.t("n_votes", smart_count: 5).should.equal("5 glasova")
+
 describe "locale", ->
 
   beforeEach ->
