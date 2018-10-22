@@ -99,16 +99,16 @@ var pluralTypes = {
 // for language code, and if that does not exist will default to 'en'
 var pluralTypeToLanguages = {
   arabic: ['ar'],
-  bosnian_serbian: ['bs-Latn-BA', 'bs-Cyrl-BA', 'srl-RS', 'sr-RS'],
+  bosnian_serbian: ['bs', 'bs-Latn-BA', 'bs-Cyrl-BA', 'srl', 'srl-RS', 'sr', 'sr-RS'],
   chinese: ['id', 'id-ID', 'ja', 'ko', 'ko-KR', 'lo', 'ms', 'th', 'th-TH', 'tr', 'zh'],
   croatian: ['hr', 'hr-HR'],
-  german: ['fa', 'da', 'de', 'en', 'es', 'fi', 'el', 'he', 'hi-IN', 'hu', 'hu-HU', 'it', 'nl', 'no', 'pt', 'sv'],
+  german: ['fa', 'da', 'de', 'en', 'es', 'fi', 'el', 'he', 'hi', 'hi-IN', 'hu', 'hu-HU', 'it', 'nl', 'no', 'pt', 'sv'],
   french: ['fr', 'tl', 'pt-br'],
   russian: ['ru', 'ru-RU', 'lt'],
   czech: ['cs', 'cs-CZ', 'sk'],
   polish: ['pl'],
   icelandic: ['is'],
-  slovenian: ['sl-SL']
+  slovenian: ['sl', 'sl-SL']
 };
 
 function langToTypeMap(mapping) {
